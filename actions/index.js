@@ -1,11 +1,11 @@
-export addTodo (todo) {
+export function addTodo (todo) {
 	return {
 		type: 'addTodo',
 		todo
 	}
 }
 
-export deleteTodo (index) {
+export function deleteTodo (index) {
 	return {
 		type: 'deleteTodo',
 		index
