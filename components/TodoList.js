@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import	TodoItem from './TodoItem'
+
 class TodoList extends Component {
 	render () {
 		return (
@@ -7,7 +9,13 @@ class TodoList extends Component {
 				{
 					this.props.todos.map(
 						singleTodo => {
-							return <li key={singleTodo.id}>{singleTodo.text}</li>
+							return(
+								<TodoItem
+							 		key={singleTodo.id}
+							 		todo={singleTodo}
+							 		actions={this.props.actions}
+						 		/>
+					 		)
 						}
 					)
 				}
