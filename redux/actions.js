@@ -26,7 +26,18 @@ let actions = {
     		type: 'CREATE_USER_ID',
     		id: Math.round( Math.random()*100 )
     	}
-    }
+    },
+
+    // This function returns function but NOT OBJECT, and redux-thunk FIRST call this function 
+    // and then call function with was send into dispatch() method 
+    createNewUserIdIfOdd () {
+    	return (dispatch, getState) => {
+			const { user } = getState();
+			if (user.id % 2 === 0) return;
+			// send into dispatch() that function which we want to call next
+			dispatch(actions.createNewUserId());
+    	}
+     }
 }
 
 export default actions;

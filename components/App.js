@@ -14,7 +14,7 @@ class App extends Component {
 			<div className="app">
 				<UserInfo
 					user={this.props.user} 
-					createNewUserId={this.props.actions.createNewUserId} 
+					actions={this.props.actions} 
 				/>
 				<h1> Todo List</h1>
 				<TodoInput
