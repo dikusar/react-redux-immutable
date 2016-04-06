@@ -12,7 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon server/server.js --ignore components",
-    "start": "webpack-dev-server"
+    "start": "nodemon server/server.js --ignore components"
   },
   "keywords": [
     "[]"

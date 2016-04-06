@@ -10,6 +10,10 @@ class UserInfo extends Component {
 		this.props.actions.createNewUserIdIfOdd()	
 	}
 
+	handleNewIdAsync () {
+		this.props.actions.createNewUserIdAsync()
+	}
+
 	render () {
 		return(
 			<div>
@@ -20,6 +24,9 @@ class UserInfo extends Component {
 				</button>
 				<button onClick={this.handleNewIdIfOdd.bind(this)}>
 					Update if ODD
+				</button>
+				<button onClick={this.handleNewIdAsync.bind(this)}>
+					Update <b>ASYNC</b>
 				</button>
 			</div>
 		)
