@@ -27,6 +27,14 @@ module.exports = {
 				query: {
 					presets: ['react', 'es2015', 'react-hmre']
 				}
+			},
+			{
+				test: /\.css$/,
+				loader: 'style!css!autoprefixer?browsers=last 2 versions'
+			},
+			{
+				test: /\.styl$/,
+				loader: 'style!css!autoprefixer?browsers=last 2 versions!stylus'
 			}
 		]
 	},

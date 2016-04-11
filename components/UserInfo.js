@@ -1,3 +1,5 @@
+import  './userInfo.styl';
+
 import React, { Component } from 'react'
 
 class UserInfo extends Component {
@@ -16,7 +18,7 @@ class UserInfo extends Component {
 
 	render () {
 		return(
-			<div>
+			<div className="user-info">
 				<div>user name: {this.props.user.username}</div>
 				<div>user id: {this.props.user.id}</div>
 				<button onClick={this.handleNewId.bind(this)}>
