@@ -20,7 +20,7 @@ class TodoInput extends Component {
 
 	handleSubmit (event) {
 		event.preventDefault
-		this.props.addTodo(this.state.inputText);
+		this.props.sendNewToDoToServer(this.state.inputText);
 	}
 
 	render () {

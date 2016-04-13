@@ -18,7 +18,7 @@ class App extends Component {
 				/>
 				<h1> Todo List</h1>
 				<TodoInput
-					addTodo={this.props.actions.addTodo} 
+					sendNewToDoToServer={this.props.actions.sendNewToDoToServer} 
 				/>
 				<TodoList
 					todos={this.props.todos}

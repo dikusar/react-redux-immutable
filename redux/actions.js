@@ -7,6 +7,27 @@ let actions = {
         }
     },
 
+    //  Put new To do item into the server by fetch() method
+    // and when success - call addTodo() action
+    sendNewToDoToServer (text) {
+        return (dispatch) => {
+            fetch('/comments.json', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: 'Hubot',
+                    login: 'hubot',
+                })
+            })
+            .then( () => dispatch( actions.addTodo(text)) ).catch(error => {
+                console.log('request failed', error);
+            })
+        }
+    }, 
+
     completeTodo (id) {
        return {
             type: 'COMPLETE_TODO',
@@ -45,16 +66,6 @@ let actions = {
             setTimeout (()=> {
                 dispatch(actions.createNewUserId()); 
             }, 2000);
-            // $.get( 
-            //     "test.cgi",
-            //     { 
-            //         name: "John",
-            //         time: "2pm" 
-            //     }
-            // ).done(data => {
-            //     console.log( "Data Loaded: " + data );
-            //     dispatch(actions.createNewUserId()); 
-            // });
         }
      }
 }
