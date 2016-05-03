@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // import TextDisplay from './TextDisplay'
 // import { addTodo } from '../redux/actions'
 
-class TodoInput extends Component {
+export default class TodoInput extends Component {
 
 	constructor (props, context) {
 		super(props, context)
@@ -39,4 +39,4 @@ class TodoInput extends Component {
 
 }
 
-export default TodoInput
+// export default TodoInput

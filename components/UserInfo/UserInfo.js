@@ -2,7 +2,7 @@ import  './userInfo.styl';
 
 import React, { Component } from 'react'
 
-class UserInfo extends Component {
+export default class UserInfo extends Component {
 
 	handleNewId () {
 		this.props.actions.createNewUserId()
@@ -36,4 +36,4 @@ class UserInfo extends Component {
 
 }
 
-export default UserInfo
+// export default UserInfo

@@ -2,10 +2,17 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import TodoInput from './TodoInput'
-import TodoList from './TodoList'
-import actions from '../redux/actions'
-import UserInfo from './UserInfo'
+import actions from '../../redux/actions'
+import {
+	TodoInput,
+	TodoList,
+	UserInfo
+
+} from '../../components';
+
+// import TodoInput from './TodoInput'
+// import TodoList from './TodoList'
+// import UserInfo from './UserInfo'
 
 class App extends Component {
 
@@ -44,3 +51,4 @@ function mapDispatchToProps (dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
+// connect(mapStateToProps, mapDispatchToProps)(App);

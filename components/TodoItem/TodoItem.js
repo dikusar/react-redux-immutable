@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 // import { deleteTodo, completeTodo } from '../redux/actions'
 
-class TodoItem extends Component {
+export default class TodoItem extends Component {
 
     handleComplete () {
         this.props.actions.completeTodo(this.props.todo.id)
@@ -23,4 +23,4 @@ class TodoItem extends Component {
     }
 }
 
-export default TodoItem
+// export default TodoItem
