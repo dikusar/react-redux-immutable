@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import	TodoItem from '../TodoItem/TodoItem'
+import './todoList.styl'
 
 export default class TodoList extends Component {
 	render () {
@@ -23,5 +24,3 @@ export default class TodoList extends Component {
 		)
 	}
 }
-
-// export default TodoList

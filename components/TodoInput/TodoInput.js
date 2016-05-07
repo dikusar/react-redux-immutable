@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-
-// import TextDisplay from './TextDisplay'
-// import { addTodo } from '../redux/actions'
+import './todoInput.styl'
 
 export default class TodoInput extends Component {
 
@@ -25,7 +23,7 @@ export default class TodoInput extends Component {
 
 	render () {
 		return(
-			<div>
+			<div className="todo-input">
 				<input
 					type="text"
 					placeholder="Type something"
@@ -39,4 +37,3 @@ export default class TodoInput extends Component {
 
 }
 
-// export default TodoInput

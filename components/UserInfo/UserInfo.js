@@ -36,4 +36,3 @@ export default class UserInfo extends Component {
 
 }
 
-// export default UserInfo

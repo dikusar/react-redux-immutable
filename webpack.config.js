@@ -1,5 +1,6 @@
 var path = require("path");
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 
@@ -32,9 +33,13 @@ module.exports = {
 				test: /\.css$/,
 				loader: 'style!css!autoprefixer?browsers=last 2 versions'
 			},
+			// {
+			// 	test: /\.styl$/,
+			// 	loader: 'style!css!autoprefixer?browsers=last 2 versions!stylus'
+			// },
 			{
 				test: /\.styl$/,
-				loader: 'style!css!autoprefixer?browsers=last 2 versions!stylus'
+				loader: ExtractTextPlugin.extract('style', 'css!stylus?resolve url')
 			}
 		]
 	},
@@ -51,7 +56,8 @@ module.exports = {
 		new webpack.NoErrorsPlugin(),
 		new webpack.ProvidePlugin({
     		'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-  		})
+  		}),
+  		new ExtractTextPlugin("styles.css")
 	]
 
 	// devServer: {

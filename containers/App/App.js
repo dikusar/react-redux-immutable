@@ -9,10 +9,8 @@ import {
 	UserInfo
 
 } from '../../components';
+import './app.styl'
 
-// import TodoInput from './TodoInput'
-// import TodoList from './TodoList'
-// import UserInfo from './UserInfo'
 
 class App extends Component {
 
@@ -23,7 +21,7 @@ class App extends Component {
 					user={this.props.user} 
 					actions={this.props.actions} 
 				/>
-				<h1> Todo List</h1>
+				<h1 className="app__title"> Todo List</h1>
 				<TodoInput
 					sendNewToDoToServer={this.props.actions.sendNewToDoToServer} 
 				/>
