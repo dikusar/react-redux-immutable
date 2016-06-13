@@ -1,8 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
+import { Router, browserHistory } from 'react-router'
 
-import {App} from '../containers'
+import {routes} from './router'
 import configureStore from '../redux/store'
 
 let initialState = {
@@ -21,7 +22,7 @@ let store=configureStore(initialState)
 
 render(
 	<Provider store={store}>
-		<App />
-	</Provider>,
+		<Router history={browserHistory} routes={routes} />
+	</Provider>	,
 	document.getElementById('app')
 )

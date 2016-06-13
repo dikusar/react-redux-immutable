@@ -17,7 +17,7 @@ export default class TodoInput extends Component {
 	}
 
 	handleSubmit (event) {
-		event.preventDefault
+		event.preventDefault;
 		this.props.sendNewToDoToServer(this.state.inputText);
 	}
 

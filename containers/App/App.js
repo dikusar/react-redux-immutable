@@ -3,32 +3,18 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import actions from '../../redux/actions'
-import {
-	TodoInput,
-	TodoList,
-	UserInfo
-
-} from '../../components';
+import { TodoInput } from '../../components'
 import './app.styl'
 
-
-class App extends Component {
+export default class App extends Component {
 
 	render () {
 		return (
 			<div className="app">
-				<UserInfo
-					user={this.props.user} 
-					actions={this.props.actions} 
-				/>
-				<h1 className="app__title"> Todo List</h1>
-				<TodoInput
-					sendNewToDoToServer={this.props.actions.sendNewToDoToServer} 
-				/>
-				<TodoList
-					todos={this.props.todos}
-					actions={this.props.actions} 
-				/>
+				<h1>1111</h1>
+				<main>
+					 {React.cloneElement(this.props.children, this.props)}
+				</main>
 			</div>
 		)
 	}
@@ -50,3 +36,5 @@ function mapDispatchToProps (dispatch) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
 // connect(mapStateToProps, mapDispatchToProps)(App);
+
+// export default App;
