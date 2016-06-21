@@ -8,16 +8,18 @@ import {
 	TodoList,
 	UserInfo,
     TodoDetail,
-    Home
+    Home,
+    NotFound
 
 } from '../components';
 
 export const routes = (
-	<div>
-		<Route path="/" component={App}>
+    <div>
+    	<Route path="/" component={App}>
             <IndexRoute component={Home} />
             <Route path="user-info" component={UserInfo} />
-			<Route path="todo-list" component={TodoList} />
-		</Route>
-	</div>
+    		<Route path="todo-list" component={TodoList} />
+    	</Route>
+        <Route path='*' component={NotFound} />
+    </div>
 );

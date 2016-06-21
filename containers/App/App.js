@@ -1,12 +1,15 @@
+// Lib
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
 
-
+// App js
 import actions from '../../redux/actions'
 import { TodoInput } from '../../components'
-// styles
+
+// App styles
+import '../../styles/common.styl'
 import './app.styl'
 
 export default class App extends Component {
@@ -14,16 +17,29 @@ export default class App extends Component {
 	render () {
 		return (
 			<div className="app">
-				<h1>Menu</h1>
+				<h1 className="app__title">Menu</h1>
                 <ul className="menu">
-                <li className="menu__item">
-                        <Link to="/">Home</Link>
+                    <li className="menu__item">
+                        <Link className="link" 
+                            activeClassName="link link_type_active"
+                            onlyActiveOnIndex={true} 
+                            to="/">
+                            Home
+                        </Link>
                     </li>
                     <li className="menu__item">
-                        <Link to="/todo-list">ToDo List</Link>
+                        <Link className="link"
+                             activeClassName="link link_type_active" 
+                             to="/todo-list">
+                             ToDo List
+                         </Link>
                     </li>
                     <li className="menu__item">
-                        <Link to="/user-info">User Info</Link>
+                        <Link className="link"
+                            activeClassName="link link_type_active"
+                            to="/user-info">
+                            User Info
+                        </Link>
                     </li>
                 </ul>
 				<main>

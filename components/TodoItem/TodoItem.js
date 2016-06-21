@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-// import { deleteTodo, completeTodo } from '../redux/actions'
-
 export default class TodoItem extends Component {
 
     handleComplete () {
@@ -23,4 +21,3 @@ export default class TodoItem extends Component {
     }
 }
 
-// export default TodoItem
