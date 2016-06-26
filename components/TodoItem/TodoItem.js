@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
+
+//  Styles
+import './TodoItem.styl'
 
 export default class TodoItem extends Component {
 
@@ -12,10 +16,17 @@ export default class TodoItem extends Component {
 
     render () {
         return (
-             <li>
+             <li className="todo-item">
                 <div> {this.props.todo.text} </div>
-                <button onClick={ this.handleComplete.bind(this) }> Mark as completed </button>
-                <button onClick={ this.handleDelete.bind(this) }> Delete todo </button>
+                <button className="todo-item__btn" onClick={ this.handleComplete.bind(this) }>
+                    Mark as completed 
+                </button>
+                <button className="todo-item__btn" onClick={ this.handleDelete.bind(this) }>
+                    Delete todo 
+                 </button>
+                 <Link className="todo-item__link" to={`/todo-item/${this.props.todo.id}`} >
+                    More detail 
+                 </Link>
             </li>
         )
     }

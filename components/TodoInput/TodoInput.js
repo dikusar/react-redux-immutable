@@ -30,7 +30,7 @@ export default class TodoInput extends Component {
 					value={this.state.inputText}
 					onChange={this.handleChange.bind(this)}
 				/>
-				<button onClick={this.handleSubmit.bind(this)}>Submit</button>
+				<button className="todo-input__btn" onClick={this.handleSubmit.bind(this)}>Submit</button>
 			</div>
 		)
 	}
