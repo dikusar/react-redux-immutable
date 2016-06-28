@@ -5,6 +5,9 @@ import TodoInput from './TodoInput/TodoInput';
 import Home from './Home/Home';
 import NotFound from './NotFound/NotFound';
 import ToDoItemDetail from './ToDoItemDetail/ToDoItemDetail';
+import Menu from './Menu/Menu';
+import Login from './Login/Login';
+import Admin from './Admin/Admin';
 
 export {
 	UserInfo,
@@ -12,7 +15,10 @@ export {
 	TodoInput,
     Home,
     NotFound,
-    ToDoItemDetail
+    ToDoItemDetail,
+    Menu,
+    Login,
+    Admin
 }
 
 
